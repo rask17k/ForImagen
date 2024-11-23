@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación de Personaje</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <h1 class="titulo-pagina">Formulario de Creación de Personaje</h1>
+    <div class="contenedor-formulario">
+        <form action="procesar.php" method="post" enctype="multipart/form-data">
+            <h3>Nombre del Personaje:</h3>
+            <label for="campo-nombre">
+                <label>
+                <input type="text" name="nombre_personaje" id="campo-nombre" required>
+            </label>
+            <br>
+            <h3>Apodo:</h3>
+            <label for="campo-apodo">
+                <label>
+                <input type="text" name="apodo" id="campo-apodo" required>
+            </label>
+            <br>
+            <h3>Edad:</h3>
+            <label for="campo-edad">
+                <label>
+                <input type="number" name="edad_personaje" id="campo-edad" required min="1">
+            </label>
+            <br>
+            <fieldset>
+                <legend>Equipamiento</legend>
+                <input type="checkbox" name="equipamiento[]" id="equipo-maza" value="maza">
+                <label for="equipo-maza"><strong>Maza</strong></label>
+                <br>
+                <input type="checkbox" name="equipamiento[]" id="equipo-antorcha" value="antorcha">
+                <label for="equipo-antorcha"><strong>Antorcha</strong></label>
+                <br>
+                <input type="checkbox" name="equipamiento[]" id="equipo-martillo" value="martillo">
+                <label for="equipo-martillo"><strong>Martillo</strong></label>
+                <br>
+                <input type="checkbox" name="equipamiento[]" id="equipo-latigo" value="latigo">
+                <label for="equipo-latigo"><strong>Látigo</strong></label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>¿Habilidades Mágicas?</legend>
+                <input type="radio" name="habilidad_magica" id="magia-si" value="si" required>
+                <label for="magia-si"><strong>Sí</strong></label>
+                <br>
+                <input type="radio" name="habilidad_magica" id="magia-no" value="no" required>
+                <label for="magia-no"><strong>No</strong></label>
+            </fieldset>
+            <h3>Subir Imagen del Personaje:</h3>
+            <fieldset>
+                <input type="file" id="imagen-personaje" name="imagen_personaje" accept=".png" >
+            </fieldset>
+            <br>
+            <input type="submit" value="Crear Personaje" class="boton-enviar">
+            <input type="reset" value="Reiniciar Formulario" class="boton-reiniciar">
+        </form>
+        <br>
+    </div>
+</body>
+</html>
